@@ -47,18 +47,26 @@ public class MyAdvancedMathTest_PowerOfTwo_ParameterizedTest {
 	 */
 	@Test
 	public void testPowerOfTwoWithNormalCases() {
-
+		mam.powerOfTwo(0);
 			mam.add(5,6);
 			int a[]={1,2,4,5};
 			mam.reverseArray(a,(MyMath) mm);
+
 	}
 	@Test(expected = IllegalArgumentException.class)
 	public void testAdd(){
 		mam.add(3,Integer.MAX_VALUE-1);
+
+
 	}
 	@Test(expected = IllegalArgumentException.class)
 	public void testAddNegatif(){
 		mam.add(-5,-2);
 	}
+	@Test(expected = IllegalArgumentException.class)
+	public void testPower(){
+		mam.powerOfTwo(31);
+	}
+
 }
 

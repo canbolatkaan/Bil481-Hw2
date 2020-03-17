@@ -12,7 +12,7 @@ public class HistogramGenerator {
 	public HistogramGenerator(ChartIO utils) {
 		this.utils = utils;
 	}
-	
+
 	public void generateHistogram(String gradesFilepath, String outputFilepath) {
 		int[] grades = this.utils.readFile(gradesFilepath);
 		int[] frequencies = calculateFrequencies(grades);
